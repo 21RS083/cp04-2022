@@ -78,6 +78,10 @@
     #remain{
         font-weight: bold;
     }
+
+    #time{
+        box-shadow: 5px 5px 5px;
+    }
     
     input[type=number] {text-align: right;}
 

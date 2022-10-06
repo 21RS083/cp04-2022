@@ -74,6 +74,10 @@
         background-color: yellow;
         color: green;
     }
+
+    #remain{
+        font-weight: bold;
+    }
     
     input[type=number] {text-align: right;}
 

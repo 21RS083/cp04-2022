@@ -173,6 +173,7 @@
 
     // 変数宣言
     var active = false;
+    var exe = false;
     var cntactive =false;
     var startTime = 0;
     var period = 0;
@@ -207,6 +208,7 @@
     // ButtonAがクリックされた時の処理
     function btnAClick(e){
         active = true;
+        exe=true;
         startTime = new Date();
     }
 
@@ -214,7 +216,7 @@
     function btnBClick(e){
         if(active){
             active = false;
-        }else if(active==false){
+        }else if(active==false && exe==true){
             active=true;
         }
         
@@ -226,6 +228,7 @@
     function btnCClick(e){
         alarm();
         active = false;
+        exe = false;
         period = 60*parseInt($("#minute").val())+parseInt($("#second").val());
         $("#time").html("経過時間: 0");
         $("#remain").html("残り時間; "+period);
@@ -235,6 +238,7 @@
     function btnDClick(e){
         alarm();
         active = false;
+        exe = false;
         period = 60*3;
         $("#time").html("経過時間: 0");
         $("#remain").html("残り時間; "+period);
@@ -244,6 +248,7 @@
     function btnEClick(e){
         alarm();
         active = false;
+        exe = false;
         period = 60;
         $("#time").html("経過時間: 0");
         $("#remain").html("残り時間; "+period);
